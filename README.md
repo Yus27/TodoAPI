@@ -1,1 +1,1 @@
-# TODO list API (Djagno)
+# TODO list API (Django)
