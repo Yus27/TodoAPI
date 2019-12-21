@@ -21,7 +21,7 @@ DEBUG = False
 ALLOWED_HOSTS = [
     "https://yus27.github.io",
     "http://localhost:3000",
-    "http://localhost:8000"
+    "http://127.0.0.1:8000/"
 ]
 
 
