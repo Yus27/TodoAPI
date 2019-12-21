@@ -1,7 +1,10 @@
 from rest_framework import serializers
 from todolist.models import Todo
+from rest_framework_bulk import BulkListSerializer, BulkSerializerMixin
 
-class TodoSerializer(serializers.ModelSerializer):
+
+class TodoSerializer(BulkSerializerMixin, serializers.ModelSerializer):
     class Meta:
         model = Todo
-        fields = ('id', 'title', 'isCompleted')
+        fields = ('id', 'title', 'isCompleted', 'order', 'date')
+        list_serializer_class = BulkListSerializer
