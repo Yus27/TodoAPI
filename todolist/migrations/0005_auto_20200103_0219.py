@@ -17,11 +17,5 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('catTitle', models.CharField(max_length=200)),
             ],
-        ),
-        migrations.AddField(
-            model_name='todo',
-            name='category',
-            field=models.ForeignKey(default=1, on_delete=django.db.models.deletion.CASCADE, to='todolist.Category'),
-            preserve_default=False,
-        ),
+        )
     ]
