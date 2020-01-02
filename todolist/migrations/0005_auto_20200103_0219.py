@@ -21,7 +21,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='todo',
             name='category',
-            field=models.ForeignKey(default=12345, on_delete=django.db.models.deletion.CASCADE, to='todolist.Category'),
+            field=models.ForeignKey(default=1, on_delete=django.db.models.deletion.CASCADE, to='todolist.Category'),
             preserve_default=False,
         ),
     ]
