@@ -19,9 +19,10 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'et4wie@55ymyngo4%3!$e4-a(vzq6@
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    "https://yus27.github.io",
-    "http://localhost:3000",
-    "http://127.0.0.1:8000/"
+    "*"
+    # "https://yus27.github.io",
+    # "http://localhost:3000",
+    # "http://127.0.0.1:8000/"
 ]
 
 
@@ -130,10 +131,11 @@ REST_FRAMEWORK = {
     ]
 }
 
-CORS_ORIGIN_WHITELIST = [
-    "https://yus27.github.io",
-    "http://localhost:3000",
-]
+CORS_ORIGIN_ALLOW_ALL = True
+# CORS_ORIGIN_WHITELIST = [
+#     "https://yus27.github.io",
+#     "http://localhost:3000",
+# ]
 
 # Activate Django-Heroku.
 django_heroku.settings(locals())
