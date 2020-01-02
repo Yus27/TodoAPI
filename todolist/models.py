@@ -1,10 +1,17 @@
 from django.db import models
 
+class Category(models.Model):
+    catTitle = models.CharField(max_length=200)
+
+    def __str__(self):
+        return self.catTitle
+
+
 class Todo(models.Model):
     title = models.CharField(max_length=200)
     isCompleted = models.BooleanField(default=False)
     order = models.IntegerField(default=0)
-    # date = models.DateTimeField(auto_now=True)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE, default=1)
 
 
     def __str__(self):
