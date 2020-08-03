@@ -1,5 +1,5 @@
 from django.db import models
-import datetime
+from django.utils import timezone
 
 class Category(models.Model):
     catTitle = models.CharField(max_length=200)
@@ -11,7 +11,7 @@ class Category(models.Model):
 class Todo(models.Model):
     title = models.CharField(max_length=200)
     isCompleted = models.BooleanField(default=False)
-    lastChangeDateTime = models.DateTimeField(default=datetime.datetime.now())
+    lastChangeDateTime = models.DateTimeField(default=timezone.now())
     order = models.IntegerField(default=0)
     category = models.ForeignKey(Category, on_delete=models.CASCADE, default=1)
 
