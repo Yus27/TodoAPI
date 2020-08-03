@@ -6,7 +6,7 @@ from rest_framework_bulk import BulkListSerializer, BulkSerializerMixin
 class TodoSerializer(BulkSerializerMixin, serializers.ModelSerializer):
     class Meta:
         model = Todo
-        fields = ('id', 'title', 'isCompleted', 'order', 'category')
+        fields = ('id', 'title', 'isCompleted', 'lastChangeDateTime', 'order', 'category')
         list_serializer_class = BulkListSerializer
 
 
